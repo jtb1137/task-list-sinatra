@@ -8,6 +8,16 @@ class TasksController < ApplicationController
 		erb :'/tasks/new'
 	end
 
+	get '/tasks/:id/edit' do
+		@task = Task.find_by(id: params[:id])
+		erb :'/tasks/edit'
+	end
+	
+	get '/tasks/:id' do
+		@task = Task.find_by(id: params[:id])
+		erb :'/tasks/show'
+	end
+
 	post '/tasks' do
 		@task = Task.create(name: params[:name], list_id: params[:list_id])
 		@task.save
