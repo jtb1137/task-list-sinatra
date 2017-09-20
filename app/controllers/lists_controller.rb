@@ -30,4 +30,10 @@ class ListsController < ApplicationController
 		@list.save
 		redirect "/lists"
 	end
+
+	delete '/lists/:id' do
+		@list = List.find_by(id: params[:id])
+		@list.delete
+		redirect '/lists'
+	end
 end
