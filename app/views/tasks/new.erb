@@ -1,0 +1,10 @@
+<form action="/tasks" method="POST">
+	<label>Task Name: </label>
+	<input type="text" name="name">
+	<% List.all.each do |list| %>
+		<input type="checkbox" name="list_id" value="<%= list.id %>"> <%= list.name %></input>
+	<% end %>	
+	<input type="submit" value="Submit">
+</form>
+
+
