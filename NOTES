@@ -1,0 +1,9 @@
+1. Database => users, lists, tasks
+	lists have multiple tasks => tasks need foreign key 
+	users have multiple lists, multiple tasks through lists
+2. Can create a new list
+	new
+	edit
+	delete
+	show
+3. Can create tasks on a list
