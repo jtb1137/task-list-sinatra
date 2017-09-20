@@ -1,0 +1,7 @@
+<h3><%= @list.name %></h3>
+<form action="/lists/<%= @list.id %>" method="POST">
+	<input id="hidden" type="hidden" name="_method" value="PATCH">
+	<label>Name: </label>
+	<input type="text" name="name">
+	<input type="submit" name="Submit">
+</form>
