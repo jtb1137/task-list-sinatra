@@ -12,6 +12,11 @@ class ListsController < ApplicationController
 		@list = List.find_by(id: params[:id])
 		erb :'/lists/edit'
 	end
+
+	get '/tasks/:id/delete' do
+		@task = Task.find_by(id: params[:id])
+		erb :'/tasks/delete'
+	end
 	
 	get '/lists/:id' do
 		@list = List.find_by(id: params[:id])

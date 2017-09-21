@@ -1,1 +1,8 @@
 <h1><%= @list.name %></h1>
+<a href="/lists/<%= @list.id %>/edit">Edit List</a>
+|&nbsp;
+<a href="/tasks/new">Add Task</a>
+
+<% @list.tasks.each do |task| %>
+	<li><a href="/tasks/<%= task.id %>"><%= task.name %></a></li>
+<% end %>
