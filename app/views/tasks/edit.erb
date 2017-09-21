@@ -6,6 +6,9 @@
 		<input type="checkbox" name="list_id" value="<%= list.id %>" <%= 'checked' if @task.list_id == (list.id) %> > <%= list.name %></input>
 	<% end %>	
 	<input type="submit" value="Submit">
+	<form action="/lists/<%= @list.id %>/delete" method="POST">
+	<input id="hidden" type="hidden" name="_method" value="DELETE">
+	<input type="submit" name="Delete">
 </form>
 
 

@@ -24,4 +24,10 @@ class TasksController < ApplicationController
 		redirect '/tasks' #make show page?
 	end
 
+	delete '/tasks/:id' do
+		@task = Task.find_by(id: params[:id])
+		@task.delete
+		redirect '/tasks'
+	end
+
 end
