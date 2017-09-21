@@ -1,3 +1,7 @@
+<h2>Current Task Lists</h2>
 <% @lists.each do |list| %>
-	<div><%= list.name %></div>
+	<div><h3><a href="/lists/show"><%= list.name %></a></h3></div>
+	<% list.tasks.each do |task| %>
+		<li><a href="/tasks/show"><%= task.name %></a></li>
+	<% end %>
 <% end %>
