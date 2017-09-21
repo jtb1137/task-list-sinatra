@@ -2,8 +2,15 @@
 	lists have multiple tasks => tasks need foreign key 
 	users have multiple lists, multiple tasks through lists
 2. Can create a new list
-	new
+	Xindex
+	Xnew
+	Xedit
+	Xdelete
+	Xshow
+3. Can create a new task
+	Xnew => select or create list
+	Xindex
 	edit
 	delete
-	show
-3. Can create tasks on a list
+	
+	

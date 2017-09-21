@@ -33,7 +33,7 @@ class ListsController < ApplicationController
 
 	delete '/lists/:id' do
 		@list = List.find_by(id: params[:id])
-		@list.delete
+		@list.destroy
 		redirect '/lists'
 	end
 end

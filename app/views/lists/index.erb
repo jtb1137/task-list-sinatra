@@ -6,6 +6,6 @@
 	<a href="/tasks/new">Add Task</a>
 
 	<% list.tasks.each do |task| %>
-		<li><a href="/tasks/show"><%= task.name %></a></li>
+		<li><a href="/tasks/<%= task.id %>"><%= task.name %></a></li>
 	<% end %>
 <% end %>
